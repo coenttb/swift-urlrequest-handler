@@ -21,7 +21,7 @@ extension URLRequest {
         public var debug = false
         public var decoder: JSONDecoder
         @Dependency(\.logger) var logger
-        
+        @Dependency(\.defaultSession) var session
         /// Initializes a new request handler.
         /// - Parameters:
         ///   - debug: Whether to enable debug logging. Defaults to false.
@@ -173,7 +173,7 @@ extension URLRequest {
         private func performRequest(_ request: URLRequest) async throws -> (Data, HTTPURLResponse) {
             if debug { logRequest(request) }
             
-            @Dependency(\.defaultSession) var session
+            
             let (data, response) = try await session(request)
             
             if debug { logResponse(response, data: data) }
