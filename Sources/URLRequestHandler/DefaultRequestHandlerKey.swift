@@ -138,7 +138,7 @@ extension URLRequest {
                     let rawDataString = String(data: data, encoding: .utf8) ?? "Unable to convert data to UTF-8 string"
                     let context = DecodingContext(
                         originalError: decodeError.localizedDescription,
-                        attemptedType: String(describing: type),
+                        attemptedType: String(reflecting: type),
                         fileID: String(describing: fileID),
                         line: line,
                         rawData: rawDataString
@@ -207,7 +207,7 @@ extension URLRequest {
                 let rawDataString = String(data: data, encoding: .utf8) ?? "Unable to convert data to UTF-8 string"
                 let context = DecodingContext(
                     originalError: error.localizedDescription,
-                    attemptedType: String(describing: type),
+                    attemptedType: String(reflecting: type),
                     fileID: String(describing: fileID),
                     line: line,
                     rawData: rawDataString
