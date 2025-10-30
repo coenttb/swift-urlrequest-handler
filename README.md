@@ -1,21 +1,26 @@
 # swift-urlrequest-handler
 
-A comprehensive URLRequest handling system for Swift with structured error handling, envelope/direct response decoding, and dependency injection support.
+A Swift package for URLRequest handling with structured error handling.
 
-![Version](https://img.shields.io/badge/version-0.0.1-green.svg)
-![Swift](https://img.shields.io/badge/swift-6.0-orange.svg)
-![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg)
+[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%2013%2B%20|%20macOS%2010.15%2B%20|%20tvOS%2013%2B%20|%20watchOS%206%2B-lightgray.svg)]()
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![CI](https://github.com/coenttb/swift-urlrequest-handler/workflows/CI/badge.svg)](https://github.com/coenttb/swift-urlrequest-handler/actions/workflows/ci.yml)
+
+## Overview
+
+A type-safe URLRequest handling system with automatic envelope/direct response decoding, structured error handling, and dependency injection via swift-dependencies.
 
 ## Features
 
-* **Structured URLRequest handling**: Type-safe request handler with automatic response decoding
-* **Envelope pattern support**: Automatically handles both envelope-wrapped and direct JSON responses
-* **Comprehensive error handling**: Detailed error types with context for debugging
-* **Privacy-conscious logging**: Automatic sanitization of sensitive headers (authorization, tokens)
-* **Dependency injection**: Built-in support for swift-dependencies
-* **Configurable JSON decoding**: Customizable decoder with sensible defaults
-* **Test support**: Debug mode for testing with enhanced logging
-* **URLSession abstraction**: Testable URLSession dependency
+- Type-safe request handling with automatic response decoding
+- Envelope pattern support (automatically handles both envelope-wrapped and direct JSON responses)
+- Structured error handling with detailed error types and context
+- Privacy-conscious logging (automatic sanitization of sensitive headers)
+- Dependency injection via swift-dependencies
+- Configurable JSON decoding with sensible defaults
+- Debug mode for testing with enhanced logging
+- Testable URLSession abstraction
 
 ## Installation
 
@@ -233,11 +238,27 @@ public struct Envelope<T> {
 }
 ```
 
+## Testing
+
+```bash
+swift test
+```
+
 ## Requirements
 
 - Swift 6.0+
 - iOS 13.0+ / macOS 10.15+ / tvOS 13.0+ / watchOS 6.0+
 
+## Dependencies
+
+- [swift-dependencies](https://github.com/pointfreeco/swift-dependencies) (1.9.2+)
+- [xctest-dynamic-overlay](https://github.com/pointfreeco/xctest-dynamic-overlay) (1.4.3+)
+- [swift-logging-extras](https://github.com/coenttb/swift-logging-extras) (0.0.1+)
+
 ## License
 
-This package is licensed under the Apache License 2.0.
+This package is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
