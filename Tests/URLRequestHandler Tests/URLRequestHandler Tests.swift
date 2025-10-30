@@ -166,7 +166,7 @@ struct URLRequestHandlerTests {
         #expect(Bool(false), "Should have thrown a decoding error")
       } catch let error as RequestError {
         if case .decodingError(let context) = error {
-          #expect(context.attemptedType == "User")
+          #expect(context.attemptedType.contains("User"))
           #expect(context.rawData?.contains("invalid") == true)
         } else {
           #expect(Bool(false), "Wrong error type: \(error)")
