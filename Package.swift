@@ -51,7 +51,7 @@ let package = Package(
                 .dependenciesTestSupport
             ]
         )
-    ],
+    ]
 )
 
 extension String { var tests: Self { self + " Tests" } }
