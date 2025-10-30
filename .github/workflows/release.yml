@@ -72,7 +72,7 @@ jobs:
 
           # Create archives of the built libraries
           cd .build
-          tar -czf swift-github-types-macos.tar.gz \
+          tar -czf swift-urlrequest-handler-macos.tar.gz \
             arm64-apple-macosx/release/*.swiftmodule \
             x86_64-apple-macosx/release/*.swiftmodule \
             2>/dev/null || true
@@ -84,22 +84,22 @@ jobs:
           swift package \
             --allow-writing-to-directory ./docs \
             generate-documentation \
-            --target GitHub_Types \
+            --target URLRequestHandler \
             --output-path ./docs \
             --transform-for-static-hosting \
-            --hosting-base-path swift-github-types
+            --hosting-base-path swift-urlrequest-handler
 
           cat > ./docs/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
             <head>
               <meta charset="utf-8">
-              <title>Redirecting to swift-github-types documentation</title>
-              <meta http-equiv="refresh" content="0; url=./documentation/github_types/">
-              <link rel="canonical" href="./documentation/github_types/">
+              <title>Redirecting to swift-urlrequest-handler documentation</title>
+              <meta http-equiv="refresh" content="0; url=./documentation/urlrequesthandler/">
+              <link rel="canonical" href="./documentation/urlrequesthandler/">
             </head>
             <body>
-              <p>Redirecting to <a href="./documentation/github_types/">swift-github-types documentation</a>...</p>
+              <p>Redirecting to <a href="./documentation/urlrequesthandler/">swift-urlrequest-handler documentation</a>...</p>
             </body>
           </html>
           EOF
@@ -113,7 +113,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            .build/swift-github-types-macos.tar.gz
+            .build/swift-urlrequest-handler-macos.tar.gz
             documentation.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -142,10 +142,10 @@ jobs:
           swift package \
             --allow-writing-to-directory ./docs \
             generate-documentation \
-            --target GitHub_Types \
+            --target URLRequestHandler \
             --output-path ./docs \
             --transform-for-static-hosting \
-            --hosting-base-path swift-github-types
+            --hosting-base-path swift-urlrequest-handler
 
           # Create root index.html redirect
           cat > ./docs/index.html << 'EOF'
@@ -153,12 +153,12 @@ jobs:
           <html>
             <head>
               <meta charset="utf-8">
-              <title>Redirecting to swift-github-types documentation</title>
-              <meta http-equiv="refresh" content="0; url=./documentation/github_types/">
-              <link rel="canonical" href="./documentation/github_types/">
+              <title>Redirecting to swift-urlrequest-handler documentation</title>
+              <meta http-equiv="refresh" content="0; url=./documentation/urlrequesthandler/">
+              <link rel="canonical" href="./documentation/urlrequesthandler/">
             </head>
             <body>
-              <p>Redirecting to <a href="./documentation/github_types/">swift-github-types documentation</a>...</p>
+              <p>Redirecting to <a href="./documentation/urlrequesthandler/">swift-urlrequest-handler documentation</a>...</p>
             </body>
           </html>
           EOF

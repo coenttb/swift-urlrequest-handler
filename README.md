@@ -1,11 +1,33 @@
 # swift-urlrequest-handler
 
+[![CI](https://github.com/coenttb/swift-urlrequest-handler/workflows/CI/badge.svg)](https://github.com/coenttb/swift-urlrequest-handler/actions/workflows/ci.yml)
+![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
+
 A Swift package for URLRequest handling with structured error handling.
 
-[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
-[![Platforms](https://img.shields.io/badge/Platforms-iOS%2013%2B%20|%20macOS%2010.15%2B%20|%20tvOS%2013%2B%20|%20watchOS%206%2B-lightgray.svg)]()
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![CI](https://github.com/coenttb/swift-urlrequest-handler/workflows/CI/badge.svg)](https://github.com/coenttb/swift-urlrequest-handler/actions/workflows/ci.yml)
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage Examples](#usage-examples)
+  - [Basic Request Handling](#basic-request-handling)
+  - [Envelope Response Pattern](#envelope-response-pattern)
+  - [Custom JSON Decoder](#custom-json-decoder)
+  - [Void Requests](#void-requests)
+  - [Error Handling](#error-handling)
+  - [Testing with Mocks](#testing-with-mocks)
+  - [Custom URLSession](#custom-urlsession)
+- [API Reference](#api-reference)
+  - [URLRequest.Handler](#urlrequesthandler)
+  - [RequestError](#requesterror)
+  - [Envelope](#envelope)
+- [Testing](#testing)
+- [Related Packages](#related-packages)
+- [Requirements](#requirements)
+- [License](#license)
+- [Contributing](#contributing)
 
 ## Overview
 
@@ -254,6 +276,12 @@ swift test
 - [swift-dependencies](https://github.com/pointfreeco/swift-dependencies) (1.9.2+)
 - [xctest-dynamic-overlay](https://github.com/pointfreeco/xctest-dynamic-overlay) (1.4.3+)
 - [swift-logging-extras](https://github.com/coenttb/swift-logging-extras) (0.0.1+)
+
+## Related Packages
+
+- **[swift-dependencies](https://github.com/pointfreeco/swift-dependencies)** - A dependency management library for controlling and overriding dependencies in Swift applications
+- **[xctest-dynamic-overlay](https://github.com/pointfreeco/xctest-dynamic-overlay)** - Define XCTest assertion helpers directly in your application and library code
+- **[swift-logging-extras](https://github.com/coenttb/swift-logging-extras)** - Extensions and utilities for Swift Logging
 
 ## License
 
