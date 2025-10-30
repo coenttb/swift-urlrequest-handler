@@ -1,11 +1,12 @@
 import DependenciesTestSupport
 import Foundation
-#if canImport(FoundationNetworking)
-  import FoundationNetworking
-#endif
 import Testing
 
 @testable import URLRequestHandler
+
+#if canImport(FoundationNetworking)
+  import FoundationNetworking
+#endif
 
 @Suite
 struct URLRequestHandlerTests {
