@@ -31,7 +31,7 @@ let package = Package(
         .library(name: .urlRequestHandler, targets: [.urlRequestHandler])
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.9.2"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.10.0"),
         .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.4.3"),
         .package(url: "https://github.com/coenttb/swift-logging-extras", from: "0.0.1")
     ],
