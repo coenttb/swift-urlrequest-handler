@@ -279,9 +279,19 @@ swift test
 
 ## Related Packages
 
-- **[swift-dependencies](https://github.com/pointfreeco/swift-dependencies)** - A dependency management library for controlling and overriding dependencies in Swift applications
-- **[xctest-dynamic-overlay](https://github.com/pointfreeco/xctest-dynamic-overlay)** - Define XCTest assertion helpers directly in your application and library code
-- **[swift-logging-extras](https://github.com/coenttb/swift-logging-extras)** - Extensions and utilities for Swift Logging
+### Dependencies
+
+- [swift-logging-extras](https://github.com/coenttb/swift-logging-extras): A Swift package for integrating swift-logging with swift-dependencies.
+
+### Used By
+
+- [swift-mailgun-live](https://github.com/coenttb/swift-mailgun-live): A Swift package with live implementations for Mailgun.
+- [swift-server-foundation](https://github.com/coenttb/swift-server-foundation): A Swift package with tools to simplify server development.
+
+### Third-Party Dependencies
+
+- [pointfreeco/swift-dependencies](https://github.com/pointfreeco/swift-dependencies): A dependency management library for controlling dependencies in Swift.
+- [pointfreeco/xctest-dynamic-overlay](https://github.com/pointfreeco/xctest-dynamic-overlay): Define XCTest assertion helpers directly in production code.
 
 ## License
 
