@@ -25,6 +25,7 @@ jobs:
         with:
           path: /usr/local/bin/swift-format
           key: ${{ runner.os }}-swift-format-main-v1
+          save-always: true
 
       - name: Install swift-format
         if: steps.cache-swift-format.outputs.cache-hit != 'true'
