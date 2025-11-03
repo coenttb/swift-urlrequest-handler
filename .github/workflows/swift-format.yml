@@ -42,21 +42,7 @@ jobs:
           rm -rf swift-format
 
       - name: Format
-        run: |
-          echo "=== File before formatting ==="
-          cat Sources/URLRequestHandler/exports.swift
-          echo ""
-          echo "=== Running swift-format ==="
-          swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests
-          echo ""
-          echo "=== File after formatting ==="
-          cat Sources/URLRequestHandler/exports.swift
-          echo ""
-          echo "=== Git diff ==="
-          git diff Sources/URLRequestHandler/exports.swift || true
-          echo ""
-          echo "=== Git status ==="
-          git status Sources/URLRequestHandler/exports.swift
+        run: swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
