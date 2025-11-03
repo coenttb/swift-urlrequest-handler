@@ -36,8 +36,17 @@ jobs:
           cd ..
           rm -rf swift-format
 
+      - name: Debug - Check swift-format
+        run: |
+          swift-format --version
+          ls -la .swift-format || echo "No .swift-format config found"
+          pwd
+          ls -la Sources/
+
       - name: Format
-        run: swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests
+        run: |
+          swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests
+          echo "Format complete"
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
