@@ -21,6 +21,9 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref_name }}
 
+      - name: Configure git safe directory
+        run: git config --global --add safe.directory /__w/swift-urlrequest-handler/swift-urlrequest-handler
+
       - name: Restore swift-format cache
         id: cache-swift-format-restore
         uses: actions/cache/restore@v4
