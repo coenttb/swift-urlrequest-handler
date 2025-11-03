@@ -36,22 +36,8 @@ jobs:
           cd ..
           rm -rf swift-format
 
-      - name: Debug - Check swift-format
-        run: |
-          swift-format --version
-          ls -la .swift-format || echo "No .swift-format config found"
-          pwd
-          ls -la Sources/
-
       - name: Format
-        run: |
-          echo "Before formatting:"
-          cat Sources/URLRequestHandler/exports.swift
-          swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests || echo "Swift-format exited with code $?"
-          echo "After formatting:"
-          cat Sources/URLRequestHandler/exports.swift
-          echo "Git status:"
-          git status
+        run: swift-format format --recursive --in-place --ignore-unparsable-files Sources Tests
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
